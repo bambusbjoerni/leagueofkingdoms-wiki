@@ -11,7 +11,7 @@
         this.buildingspeed_input = $("#buildingspeed_input");
         this.buildingspeed_input.val(APPStorage.getSetting("buildingspeed"));
         this.buildingspeed_input.inputFilter(function(value) {
-            return /^\d*$/.test(value);    // Allow digits only, using a RegExp
+            return /^(0|[1-9][0-9]{0,2})?$/.test(value);    // Allow digits only, using a RegExp
         }).on("input keydown keyup mousedown mouseup select contextmenu drop", function (ev) {
             APPStorage.changeSetting("buildingspeed", this.value);
             APPBuilding.renderBuildingResult();

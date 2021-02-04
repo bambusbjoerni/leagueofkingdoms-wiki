@@ -37,7 +37,6 @@
             $.each(data, function(i, d) {
                 if (d.valid) {
                     that.building_level_select.append(new Option(i, i));
-                    console.log(i, d);
                 }
             });
             that.building_level_container.show();
@@ -46,7 +45,6 @@
 
     APPBuilding.prototype._buildingLevelSelected = function() {
         this.selected_level = this.building_level_select.val();
-        console.log(this.selected_level);
         this.renderBuildingResult();
     };
 
@@ -65,7 +63,7 @@
         // RESOURCE REQUIREMENTS
         $.each(building_data["resources"], function (i, resource) {
             let resource_container = $("<div></div>", {
-                class: "resource_container"
+                class: "resource_container flex_row justify_between"
             }).css({
                 "background-image": "url(sprites/" + resource["type"] + ".png)"
             });

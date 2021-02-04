@@ -1,23 +1,6 @@
 (function($){
 
-    $.fn.inputFilter = function(inputFilter) {
-        return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
-            if (inputFilter(this.value)) {
-                this.oldValue = this.value;
-                this.oldSelectionStart = this.selectionStart;
-                this.oldSelectionEnd = this.selectionEnd;
-            } else if (this.hasOwnProperty("oldValue")) {
-                this.value = this.oldValue;
-                this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
-            } else {
-                this.value = "";
-            }
-        });
-    };
-
-    function APPHelper() {
-
-    }
+    function APPHelper() {}
 
     APPHelper.prototype.hallToHelps = function(hall_level) {
         switch (hall_level) {
@@ -99,6 +82,7 @@
         for (let help = 0; help < helps; help++) {
             // speedup is 1% of remaining time
             let speedup = Math.floor(remaining * 0.01);
+            speedup = speedup === 0 ? ++speedup : speedup;
             speedup += alliance_help1 * 10 + alliance_help2 * 10;
             help_time += speedup;
             remaining -= speedup;
@@ -111,6 +95,21 @@
 
     APPHelper.prototype.prefixZeroIfRequired = function(number) {
         return (String(number).length < 2 ? "0" + number : number)
+    };
+
+    APPHelper.prototype.inputFilter = function(inputFilter) {
+        return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+            if (inputFilter(this.value)) {
+                this.oldValue = this.value;
+                this.oldSelectionStart = this.selectionStart;
+                this.oldSelectionEnd = this.selectionEnd;
+            } else if (this.hasOwnProperty("oldValue")) {
+                this.value = this.oldValue;
+                this.setSelectionRange(this.oldSelectionStart, this.oldSelectionEnd);
+            } else {
+                this.value = "";
+            }
+        });
     };
 
     window.APPHelper = new APPHelper();
