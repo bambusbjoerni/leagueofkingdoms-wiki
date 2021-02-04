@@ -3,7 +3,6 @@
         APPStorage.init();
         APPSettings.init();
         APPBuilding.init();
-        document.buildings = {};
 
         $("#heading > div").on("click", (function(ev) {
             let target = $(ev.currentTarget);
