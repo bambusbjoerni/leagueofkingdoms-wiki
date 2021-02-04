@@ -1,0 +1,180 @@
+{
+  "2": {
+    "valid": true,
+    "resources": [
+      {
+        "type": "food",
+        "value": 7100
+      },
+      {
+        "type": "lumber",
+        "value": 7100
+      },
+      {
+        "type": "stone",
+        "value": 7100
+      },
+      {
+        "type": "gold",
+        "value": 4260
+      }
+    ],
+    "requirements": [
+      {
+        "type": "wall",
+        "level": 1
+      },
+      {
+        "type": "barrack",
+        "level": 1
+      }
+    ],
+    "time": 1028304
+  },
+  "3": {
+    "valid": false
+  },
+  "4": {
+    "valid": false
+  },
+  "5": {
+    "valid": false
+  },
+  "6": {
+    "valid": false
+  },
+  "7": {
+    "valid": false
+  },
+  "8": {
+    "valid": false
+  },
+  "9": {
+    "valid": false
+  },
+  "10": {
+    "valid": false
+  },
+  "11": {
+    "valid": false
+  },
+  "12": {
+    "valid": false
+  },
+  "13": {
+    "valid": false
+  },
+  "14": {
+    "valid": false
+  },
+  "15": {
+    "valid": false
+  },
+  "16": {
+    "valid": false
+  },
+  "17": {
+    "valid": false
+  },
+  "18": {
+    "valid": false
+  },
+  "19": {
+    "valid": false
+  },
+  "20": {
+    "valid": false
+  },
+  "21": {
+    "valid": false
+  },
+  "22": {
+    "valid": true,
+    "resources": [
+      {
+        "type": "food",
+        "value": 7.8,
+        "factor": 6
+      },
+      {
+        "type": "lumber",
+        "value": 7.8,
+        "factor": 6
+      },
+      {
+        "type": "stone",
+        "value": 7.8,
+        "factor": 6
+      },
+      {
+        "type": "gold",
+        "value": 4.7,
+        "factor": 6
+      }
+    ],
+    "requirements": [
+      {
+        "type": "wall",
+        "level": 21
+      },
+      {
+        "type": "academy",
+        "level": 21
+      }
+    ],
+    "time": 396723
+  },
+  "23": {
+    "valid": false
+  },
+  "24": {
+    "valid": false
+  },
+  "25": {
+    "valid": false
+  },
+  "26": {
+    "valid": true,
+    "resources": [
+      {
+        "type": "food",
+        "value": 32.0
+      },
+      {
+        "type": "lumber",
+        "value": 32.0
+      },
+      {
+        "type": "stone",
+        "value": 32.0
+      },
+      {
+        "type": "gold",
+        "value": 19.2
+      }
+    ],
+    "requirements": [
+      {
+        "type": "wall",
+        "level": 26
+      },
+      {
+        "type": "watch_tower",
+        "level": 26
+      }
+    ],
+    "time": 1028304
+  },
+  "27": {
+    "valid": false
+  },
+  "28": {
+    "valid": false
+  },
+  "29": {
+    "valid": false
+  },
+  "30": {
+    "valid": false
+  }
+}
