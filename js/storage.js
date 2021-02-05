@@ -57,7 +57,7 @@
         if (building in this.buildings) {
             deferred.resolve(this.buildings[building])
         } else {
-            $.getJSON("buildings/" + building + ".json",function (data) {
+            $.getJSON("buildings/" + building + ".json", function (data) {
                 that.buildings[building] = data;
                 deferred.resolve(data);
             });
