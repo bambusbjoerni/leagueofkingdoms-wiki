@@ -1,0 +1,182 @@
+@font-face {
+    font-family: "opensans";
+    src: url('/fonts/opensans-regular.ttf') format("truetype");
+}
+@font-face {
+    font-family: "opensans-bold";
+    src: url('/fonts/opensans-bold.ttf') format("truetype");
+}
+
+.flex_row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex_column {
+    display: flex;
+    flex-direction: column;
+}
+
+.justify_between {
+    justify-content: space-between;
+}
+
+.justify_around {
+    justify-content: space-around;
+}
+
+.bold {
+    font-family: opensans-bold;
+}
+
+body {
+    margin: 0;
+    font-family: 'opensans';
+    background-color: #2C2033;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 500px;
+    margin: 0 auto;
+    min-height: 100%;
+    background-color: #654472;
+}
+
+#heading {
+    text-align: center;
+    font-family: 'opensans-bold';
+}
+
+#heading > div {
+    padding: 1em;
+    width: 50%;
+    background-color: #BE5A7D;
+}
+
+#heading > div.selected {
+    background-color: #654472;
+    color: #CE356F;
+}
+
+#heading > div:not(.selected) {
+    cursor: pointer;
+}
+
+/* region SETTINGS */
+#settings_tab {
+    display: none;
+}
+
+.setting_item_container span {
+    margin: 0.25em;
+}
+
+.setting_row + .setting_row {
+    margin-top: 0.25em;
+}
+
+/* endregion SETTINGS */
+
+#settings_tab,
+#building_tab {
+    padding: 1.25em;
+}
+
+#building_select,
+#building_level_select {
+    display: block;
+    width: 100%;
+}
+
+.container > span {
+    font-family: 'opensans-bold';
+    display: block;
+    text-align: center;
+    padding: 0.5em;
+    font-size: 1.5em;
+    color: #CE356F;
+}
+
+input,
+select {
+    padding: 0.5em;
+}
+
+.container + .container {
+    border-top: 1px solid black;
+    margin-top: 1em;
+    padding-top: 0.5em;
+}
+
+#building_level_container,
+#building_result_container {
+    display: none;
+}
+
+.setting_heading,
+.result_heading {
+    font-family: 'opensans-bold';
+    text-align: center;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+}
+
+.setting_item_container,
+.result_item_container {
+    background-color: #BE5A7D;
+    border-radius: 0.5em;
+    padding: 1em;
+}
+
+.setting_item_container + .setting_item_container,
+.result_item_container + .result_item_container {
+    margin-top: 1em;
+}
+
+.resource_container {
+    background-size: 2em;
+    background-repeat: no-repeat;
+    padding-left: 2em;
+    margin: 0.25em;
+}
+
+#building_result_resources span {
+    font-size: 1.5em;
+}
+
+.requirement_container {
+    flex-direction: column;
+    width: 50%;
+    text-align: center;
+}
+
+.requirement_container img {
+    max-width: 100%;
+    max-height: 10em;
+}
+
+.requirement_container div {
+    font-size: 1.25em;
+    padding: 0.25em;
+}
+
+.time_block_container {
+    font-size: 1.25em;
+    margin: 0.25em;
+}
+
+#footer {
+    text-align: center;
+    padding: 1em;
+    color: #CE356F;
+}
+
+#footer > span {
+    background-image: url("/img/kainlogo_bear.svg");
+    background-size: 2em;
+    background-repeat: no-repeat;
+    padding-left: 2em;
+}
