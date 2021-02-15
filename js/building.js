@@ -45,6 +45,10 @@
 
     APPBuilding.prototype._buildingLevelSelected = function() {
         this.selected_level = this.building_level_select.val();
+        if (this.selected_level === "none"){
+            this.building_result_container.hide();
+            return;
+        }
         this.renderBuildingResult();
     };
 
@@ -85,6 +89,9 @@
                 src: "sprites/" + requirement["type"] + ".png"
             }));
             requirement_container.append(jQuery("<div></div>", {
+                text: APPHelper.typeToName(requirement["type"])
+            }));
+            requirement_container.append(jQuery("<div></div>", {
                 text: "Level " + requirement["level"]
             }));
             that.building_result_requirements.append(requirement_container);
@@ -100,15 +107,15 @@
 
         let helps = APPHelper.hallToHelps(Number(APPStorage.getSetting("hall_level")));
         let help_seconds = APPHelper.calcHelpTime(reduced_seconds, helps, Number(APPStorage.getSetting("help_speedup_1")), Number(APPStorage.getSetting("help_speedup_2")));
-        this._appendTimeBlock(this.building_result_time, help_seconds, "Help time (" +helps + "helps):");
+        this._appendTimeBlock(this.building_result_time, help_seconds, "Help time (" +helps + " helps):");
 
         let final_time = reduced_seconds - help_seconds;
-        this._appendTimeBlock(this.building_result_time, final_time, "Time remaining:");
+        this._appendTimeBlock(this.building_result_time, final_time, "Time remaining:", "bold");
 
         this.building_result_container.show();
     };
 
-    APPBuilding.prototype._appendTimeBlock = function(container, time, text) {
+    APPBuilding.prototype._appendTimeBlock = function(container, time, text, cssclass) {
         let d = Math.floor(time / (3600 * 24));
         let h = Math.floor(time % (3600 * 24) / 3600);
         let m = Math.floor(time % 3600 / 60);
@@ -120,7 +127,7 @@
             text: text
         })).append($("<span></span>", {
             text: APPHelper.prefixZeroIfRequired(d) + "d " + APPHelper.prefixZeroIfRequired(h) + ":" + APPHelper.prefixZeroIfRequired(m) + ":" + APPHelper.prefixZeroIfRequired(s)
-        }));
+        }).addClass(cssclass));
         container.append(block_container);
     };
 

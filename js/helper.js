@@ -67,6 +67,34 @@
                 return "Alliance badge";
             case "golden_pillar":
                 return "Golden pillar";
+            case "castle":
+                return "Castle";
+            case "academy":
+                return "Academy";
+            case "treasure_house":
+                return "Treasure house";
+            case "hospital":
+                return "Hospital";
+            case "hall_of_alliance":
+                return "Hall of alliance";
+            case "storage":
+                return "Storage";
+            case "trading_post":
+                return "Trading post";
+            case "wall":
+                return "Wall";
+            case "watch_tower":
+                return "Watch tower";
+            case "barrack":
+                return "Barrack";
+            case "farm":
+                return "Farm";
+            case "lumber_camp":
+                return "Lumber camp";
+            case "quarry":
+                return "Quarry";
+            case "gold_mine":
+                return "Gold mine";
             default:
                 return "ERROR: NOSTRING";
         }
