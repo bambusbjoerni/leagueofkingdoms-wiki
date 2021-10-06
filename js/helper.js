@@ -113,6 +113,12 @@
                 return "Ranged Attack 1";
             case "cavalry_atk_1":
                 return "Cavalry Attack 1";
+            case "infantry_spd_1":
+                return "Infantry Speed 1";
+            case "ranged_spd_1":
+                return "Ranged Speed 1";
+            case "cavalry_spd_1":
+                return "Cavalry Speed 1";
             default:
                 return "ERROR: NOSTRING";
         }
