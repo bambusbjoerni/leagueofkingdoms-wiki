@@ -28,6 +28,7 @@
         this.building_level_select.empty();
         if (this.selected_building === "none"){
             this.building_level_container.hide();
+            this.building_result_container.hide();
             return;
         }
         this.building_result_container.hide();

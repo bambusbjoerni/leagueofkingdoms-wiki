@@ -33,6 +33,8 @@
         this.research_research_select.empty();
         if (this.selected_tree === "none"){
             this.research_research_container.hide();
+            this.research_level_container.hide();
+            this.research_result_container.hide();
             return;
         }
         this.research_level_container.hide();
@@ -51,8 +53,9 @@
         let that = this;
         this.selected_research = this.research_research_select.val();
         this.research_level_select.empty();
-        if (this.selected_tree === "none"){
-            this.research_research_container.hide();
+        if (this.selected_research === "none"){
+            this.research_level_container.hide();
+            this.research_result_container.hide();
             return;
         }
         this.research_result_container.hide();
