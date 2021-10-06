@@ -7,6 +7,7 @@
     <script type="text/javascript" src="js/storage.js"></script>
     <script type="text/javascript" src="js/setting.js"></script>
     <script type="text/javascript" src="js/building.js"></script>
+    <script type="text/javascript" src="js/research.js"></script>
     <script type="text/javascript" src="js/app.js"></script>
     <link rel="stylesheet" href="css/stylesheet.css">
 
@@ -28,8 +29,11 @@
             <div data-tab="settings">
                 SETTINGS
             </div>
-            <div data-tab="building" class="selected">
+            <div data-tab="building">
                 BUILDINGS
+            </div>
+            <div data-tab="research" class="selected">
+                RESEARCH
             </div>
         </div>
         <div id="tabs">
@@ -43,6 +47,16 @@
                     <div class="setting_row flex_row justify_between">
                         <span>Construction Speed</span>
                         <div><input type="text" id="buildingspeed_input"><span>&#037;</span></div>
+                    </div>
+                </div>
+
+                <div id="researchspeed_container" class="setting_item_container">
+                    <div class="setting_heading">
+                        Research Speed Settings
+                    </div>
+                    <div class="setting_row flex_row justify_between">
+                        <span>Research Speed</span>
+                        <div><input type="text" id="researchspeed_input"><span>&#037;</span></div>
                     </div>
                 </div>
 
@@ -169,6 +183,53 @@
                             Time
                         </div>
                         <div id="building_result_time" class="flex_column">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="research_tab">
+                <div id="research_container" class="container">
+                    <span>Choose a Research Tree</span>
+                    <select id="research_tree_select">
+                        <option value="none">&nbsp;</option>
+                        <option value="battle">Battle</option>
+                        <option value="production">Production</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+                <div id="research_research_container" class="container">
+                    <span>Choose Research</span>
+                    <select id="research_research_select">
+                    </select>
+                </div>
+                <div id="research_level_container" class="container">
+                    <span>Choose Level</span>
+                    <select id="research_level_select">
+                    </select>
+                </div>
+                <div id="research_result_container" class="container">
+                    <div class="result_item_container">
+                        <div class="result_heading">
+                            Required Resources
+                        </div>
+                        <div id="research_result_resources" class="flex_column">
+
+                        </div>
+                    </div>
+                    <div class="result_item_container">
+                        <div class="result_heading">
+                            Required Building/Research
+                        </div>
+                        <div id="research_result_requirements" class="flex_row justify_around">
+
+                        </div>
+                    </div>
+                    <div class="result_item_container flex_column">
+                        <div class="result_heading">
+                            Time
+                        </div>
+                        <div id="research_result_time" class="flex_column">
 
                         </div>
                     </div>

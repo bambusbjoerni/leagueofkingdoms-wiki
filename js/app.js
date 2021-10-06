@@ -4,6 +4,7 @@
         APPStorage.init();
         APPSettings.init();
         APPBuilding.init();
+        APPResearch.init();
 
         $("#heading > div").on("click", (function(ev) {
             let target = $(ev.currentTarget);

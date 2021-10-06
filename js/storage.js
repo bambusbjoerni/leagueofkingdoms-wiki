@@ -3,17 +3,23 @@
     function APPStorage() {
         this.settings = {
             buildingspeed: 0,
+            researchspeed: 0,
             hall_level: 1,
             help_speedup_1: 0,
             help_speedup_2: 0
         };
-        this.buildings = {}
+        this.buildings = {};
+        this.research = {};
 
     }
     APPStorage.prototype.init = function() {
         let buildingspeed = localStorage.getItem("buildingspeed");
         if (buildingspeed) {
             this.settings.buildingspeed = buildingspeed;
+        }
+        let researchspeed = localStorage.getItem("researchspeed");
+        if (researchspeed) {
+            this.settings.researchspeed = researchspeed;
         }
         let hall_level = localStorage.getItem("hall_level");
         if (hall_level) {
@@ -41,7 +47,7 @@
 
     APPStorage.prototype.getSetting = function(item) {
         if (!(item in this.settings)) {
-            console.error("Settings " + item + "not gettable.");
+            console.error("Settings " + item + " not gettable.");
             return false;
         }
         return this.settings[item];
@@ -59,6 +65,20 @@
         } else {
             $.getJSON("buildings/" + building + ".json", function (data) {
                 that.buildings[building] = data;
+                deferred.resolve(data);
+            });
+        }
+        return deferred.promise();
+    };
+
+    APPStorage.prototype.getResearchInfo = function(tree) {
+        let deferred = $.Deferred();
+        let that = this;
+        if (tree in this.research) {
+            deferred.resolve(this.research[tree])
+        } else {
+            $.getJSON("research/" + tree + ".json", function (data) {
+                that.research[tree] = data;
                 deferred.resolve(data);
             });
         }

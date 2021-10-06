@@ -66,9 +66,6 @@ body {
 }
 
 /* region SETTINGS */
-#settings_tab {
-    display: none;
-}
 
 .setting_item_container span {
     margin: 0.25em;
@@ -82,11 +79,20 @@ body {
 
 #settings_tab,
 #building_tab {
+    display: none;
+}
+
+#settings_tab,
+#building_tab,
+#research_tab {
     padding: 1.25em;
 }
 
 #building_select,
-#building_level_select {
+#building_level_select,
+#research_tree_select,
+#research_research_select,
+#research_level_select {
     display: block;
     width: 100%;
 }
@@ -112,7 +118,10 @@ select {
 }
 
 #building_level_container,
-#building_result_container {
+#building_result_container,
+#research_research_container,
+#research_level_container,
+#research_result_container {
     display: none;
 }
 
@@ -143,7 +152,8 @@ select {
     margin: 0.25em;
 }
 
-#building_result_resources span {
+#building_result_resources span,
+#research_result_resources span{
     font-size: 1.5em;
 }
 

@@ -95,6 +95,12 @@
                 return "Quarry";
             case "gold_mine":
                 return "Gold mine";
+            case "infantry_hp_1":
+                return "Infantry HP 1";
+            case "ranged_hp_1":
+                return "Ranged HP 1";
+            case "cavalry_hp_1":
+                return "Cavalry HP 1";
             default:
                 return "ERROR: NOSTRING";
         }
