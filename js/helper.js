@@ -101,6 +101,18 @@
                 return "Ranged HP 1";
             case "cavalry_hp_1":
                 return "Cavalry HP 1";
+            case "infantry_def_1":
+                return "Infantry Defense 1";
+            case "ranged_def_1":
+                return "Ranged Defense 1";
+            case "cavalry_def_1":
+                return "Cavalry Defense 1";
+            case "infantry_atk_1":
+                return "Infantry Attack 1";
+            case "ranged_atk_1":
+                return "Ranged Attack 1";
+            case "cavalry_atk_1":
+                return "Cavalry Attack 1";
             default:
                 return "ERROR: NOSTRING";
         }
