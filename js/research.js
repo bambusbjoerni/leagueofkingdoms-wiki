@@ -59,11 +59,17 @@
             return;
         }
         this.research_result_container.hide();
-        this.research_level_select.append(new Option(" ", "none"));
-        $.each(this.research_data[this.selected_research], function(i, d) {
-            that.research_level_select.append(new Option(i+1, i));
-        });
-        this.research_level_container.show();
+        if (this.research_data[this.selected_research].length === 1) {
+            this.selected_level = 0;
+            this.research_level_container.hide();
+            this.renderResearchResult();
+        } else {
+            this.research_level_select.append(new Option(" ", "none"));
+            $.each(this.research_data[this.selected_research], function(i, d) {
+                that.research_level_select.append(new Option(i+1, i));
+            });
+            this.research_level_container.show();
+        }
     };
 
     APPResearch.prototype._researchLevelSelected = function() {

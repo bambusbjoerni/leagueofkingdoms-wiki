@@ -119,6 +119,14 @@
                 return "Ranged Speed 1";
             case "cavalry_spd_1":
                 return "Cavalry Speed 1";
+            case "troops_load":
+                return "Troops load";
+            case "warrior":
+                return "Warrior (T2)";
+            case "longbow_man":
+                return "Longbow man (T2)";
+            case "horseman":
+                return "Horseman (T2)";
             default:
                 return "ERROR: NOSTRING";
         }

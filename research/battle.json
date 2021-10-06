@@ -1965,5 +1965,263 @@
       "time": 8568,
       "power": 11730
     }
+  ],
+
+  "troops_load": [
+    {
+      "level": 1,
+      "resources": [
+        {
+          "type": "food",
+          "value": 60750
+        },
+        {
+          "type": "lumber",
+          "value": 60750
+        },
+        {
+          "type": "stone",
+          "value": 60750
+        },
+        {
+          "type": "gold",
+          "value": 121500
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 9
+        }
+      ],
+      "time": 2700,
+      "power": 1650
+    },
+    {
+      "level": 2,
+      "resources": [
+        {
+          "type": "food",
+          "value": 72900
+        },
+        {
+          "type": "lumber",
+          "value": 72900
+        },
+        {
+          "type": "stone",
+          "value": 72900
+        },
+        {
+          "type": "gold",
+          "value": 145800
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 9
+        },
+        {
+          "type": "troops_load",
+          "level": 1
+        }
+      ],
+      "time": 4050,
+      "power": 3450
+    },
+    {
+      "level": 3,
+      "resources": [
+        {
+          "type": "food",
+          "value": 94500
+        },
+        {
+          "type": "lumber",
+          "value": 94500
+        },
+        {
+          "type": "stone",
+          "value": 94500
+        },
+        {
+          "type": "gold",
+          "value": 189000
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 10
+        },
+        {
+          "type": "troops_load",
+          "level": 2
+        }
+      ],
+      "time": 6210,
+      "power": 7590
+    },
+    {
+      "level": 4,
+      "resources": [
+        {
+          "type": "food",
+          "value": 114750
+        },
+        {
+          "type": "lumber",
+          "value": 114750
+        },
+        {
+          "type": "stone",
+          "value": 114750
+        },
+        {
+          "type": "gold",
+          "value": 229500
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 10
+        },
+        {
+          "type": "troops_load",
+          "level": 3
+        }
+      ],
+      "time": 9180,
+      "power": 12150
+    },
+    {
+      "level": 5,
+      "resources": [
+        {
+          "type": "food",
+          "value": 155925
+        },
+        {
+          "type": "lumber",
+          "value": 155925
+        },
+        {
+          "type": "stone",
+          "value": 155925
+        },
+        {
+          "type": "gold",
+          "value": 311850
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 11
+        },
+        {
+          "type": "troops_load",
+          "level": 4
+        }
+      ],
+      "time": 13770,
+      "power": 17430
+    }
+  ],
+
+  "warrior": [
+    {
+      "level": 1,
+      "resources": [
+        {
+          "type": "food",
+          "value": 180000
+        },
+        {
+          "type": "lumber",
+          "value": 180000
+        },
+        {
+          "type": "stone",
+          "value": 180000
+        },
+        {
+          "type": "gold",
+          "value": 360000
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 10
+        }
+      ],
+      "time": 72000,
+      "power": 2850
+    }
+  ],
+  "longbow_man": [
+    {
+      "level": 1,
+      "resources": [
+        {
+          "type": "food",
+          "value": 180000
+        },
+        {
+          "type": "lumber",
+          "value": 180000
+        },
+        {
+          "type": "stone",
+          "value": 180000
+        },
+        {
+          "type": "gold",
+          "value": 360000
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 10
+        }
+      ],
+      "time": 72000,
+      "power": 2850
+    }
+  ],
+  "horseman": [
+    {
+      "level": 1,
+      "resources": [
+        {
+          "type": "food",
+          "value": 180000
+        },
+        {
+          "type": "lumber",
+          "value": 180000
+        },
+        {
+          "type": "stone",
+          "value": 180000
+        },
+        {
+          "type": "gold",
+          "value": 360000
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 10
+        }
+      ],
+      "time": 72000,
+      "power": 2850
+    }
   ]
 }
