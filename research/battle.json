@@ -163,7 +163,7 @@
     }
   ],
 
-  "ranged_hp_1": [
+  "archery_hp_1": [
     {
       "level": 1,
       "resources": [
@@ -219,7 +219,7 @@
           "level": 1
         },
         {
-          "type": "ranged_hp_1",
+          "type": "archery_hp_1",
           "level": 1
         }
       ],
@@ -252,7 +252,7 @@
           "level": 2
         },
         {
-          "type": "ranged_hp_1",
+          "type": "archery_hp_1",
           "level": 2
         }
       ],
@@ -285,7 +285,7 @@
           "level": 2
         },
         {
-          "type": "ranged_hp_1",
+          "type": "archery_hp_1",
           "level": 3
         }
       ],
@@ -318,7 +318,7 @@
           "level": 3
         },
         {
-          "type": "ranged_hp_1",
+          "type": "archery_hp_1",
           "level": 4
         }
       ],
@@ -516,6 +516,10 @@
         {
           "type": "academy",
           "level": 3
+        },
+        {
+          "type": "infantry_hp_1",
+          "level": 2
         }
       ],
       "time": 360,
@@ -655,7 +659,7 @@
     }
   ],
 
-  "ranged_def_1": [
+  "archery_def_1": [
     {
       "level": 1,
       "resources": [
@@ -680,6 +684,10 @@
         {
           "type": "academy",
           "level": 3
+        },
+        {
+          "type": "archery_hp_1",
+          "level": 2
         }
       ],
       "time": 360,
@@ -711,7 +719,7 @@
           "level": 3
         },
         {
-          "type": "ranged_def_1",
+          "type": "archery_def_1",
           "level": 1
         }
       ],
@@ -744,7 +752,7 @@
           "level": 4
         },
         {
-          "type": "ranged_def_1",
+          "type": "archery_def_1",
           "level": 2
         }
       ],
@@ -777,7 +785,7 @@
           "level": 4
         },
         {
-          "type": "ranged_def_1",
+          "type": "archery_def_1",
           "level": 3
         }
       ],
@@ -810,7 +818,7 @@
           "level": 5
         },
         {
-          "type": "ranged_def_1",
+          "type": "archery_def_1",
           "level": 4
         }
       ],
@@ -844,6 +852,10 @@
         {
           "type": "academy",
           "level": 3
+        },
+        {
+          "type": "cavalry_hp_1",
+          "level": 2
         }
       ],
       "time": 360,
@@ -1008,6 +1020,10 @@
         {
           "type": "academy",
           "level": 5
+        },
+        {
+          "type": "infantry_def_1",
+          "level": 2
         }
       ],
       "time": 900,
@@ -1147,7 +1163,7 @@
     }
   ],
 
-  "ranged_atk_1": [
+  "archery_atk_1": [
     {
       "level": 1,
       "resources": [
@@ -1172,6 +1188,10 @@
         {
           "type": "academy",
           "level": 5
+        },
+        {
+          "type": "archery_def_1",
+          "level": 2
         }
       ],
       "time": 900,
@@ -1203,7 +1223,7 @@
           "level": 5
         },
         {
-          "type": "ranged_atk_1",
+          "type": "archery_atk_1",
           "level": 1
         }
       ],
@@ -1236,7 +1256,7 @@
           "level": 6
         },
         {
-          "type": "ranged_atk_1",
+          "type": "archery_atk_1",
           "level": 2
         }
       ],
@@ -1269,7 +1289,7 @@
           "level": 6
         },
         {
-          "type": "ranged_atk_1",
+          "type": "archery_atk_1",
           "level": 3
         }
       ],
@@ -1302,7 +1322,7 @@
           "level": 7
         },
         {
-          "type": "ranged_atk_1",
+          "type": "archery_atk_1",
           "level": 4
         }
       ],
@@ -1336,6 +1356,10 @@
         {
           "type": "academy",
           "level": 5
+        },
+        {
+          "type": "cavalry_def_1",
+          "level": 2
         }
       ],
       "time": 900,
@@ -1500,6 +1524,10 @@
         {
           "type": "academy",
           "level": 7
+        },
+        {
+          "type": "infantry_atk_1",
+          "level": 2
         }
       ],
       "time": 1680,
@@ -1639,7 +1667,7 @@
     }
   ],
 
-  "ranged_spd_1": [
+  "archery_spd_1": [
     {
       "level": 1,
       "resources": [
@@ -1664,6 +1692,10 @@
         {
           "type": "academy",
           "level": 7
+        },
+        {
+          "type": "archery_atk_1",
+          "level": 2
         }
       ],
       "time": 1680,
@@ -1695,7 +1727,7 @@
           "level": 7
         },
         {
-          "type": "ranged_spd_1",
+          "type": "archery_spd_1",
           "level": 1
         }
       ],
@@ -1728,7 +1760,7 @@
           "level": 8
         },
         {
-          "type": "ranged_spd_1",
+          "type": "archery_spd_1",
           "level": 2
         }
       ],
@@ -1761,7 +1793,7 @@
           "level": 8
         },
         {
-          "type": "ranged_spd_1",
+          "type": "archery_spd_1",
           "level": 3
         }
       ],
@@ -1794,7 +1826,7 @@
           "level": 9
         },
         {
-          "type": "ranged_spd_1",
+          "type": "archery_spd_1",
           "level": 4
         }
       ],
@@ -1828,6 +1860,10 @@
         {
           "type": "academy",
           "level": 7
+        },
+        {
+          "type": "cavalry_atk_1",
+          "level": 2
         }
       ],
       "time": 1680,
@@ -1992,6 +2028,18 @@
         {
           "type": "academy",
           "level": 9
+        },
+        {
+          "type": "infantry_spd_1",
+          "level": 2
+        },
+        {
+          "type": "archery_spd_1",
+          "level": 2
+        },
+        {
+          "type": "cavalry_spd_1",
+          "level": 2
         }
       ],
       "time": 2700,
@@ -2156,12 +2204,17 @@
         {
           "type": "academy",
           "level": 10
+        },
+        {
+          "type": "troops_load",
+          "level": 3
         }
       ],
       "time": 72000,
       "power": 2850
     }
   ],
+  
   "longbow_man": [
     {
       "level": 1,
@@ -2187,12 +2240,17 @@
         {
           "type": "academy",
           "level": 10
+        },
+        {
+          "type": "troops_load",
+          "level": 3
         }
       ],
       "time": 72000,
       "power": 2850
     }
   ],
+  
   "horseman": [
     {
       "level": 1,
@@ -2218,10 +2276,518 @@
         {
           "type": "academy",
           "level": 10
+        },
+        {
+          "type": "troops_load",
+          "level": 3
         }
       ],
       "time": 72000,
       "power": 2850
+    }
+  ],
+  
+  "infantry_training_rate": [
+    {
+      "level": 1,
+      "resources": [
+        {
+          "type": "food",
+          "value": 77000
+        },
+        {
+          "type": "lumber",
+          "value": 38500
+        },
+        {
+          "type": "stone",
+          "value": 115500
+        },
+        {
+          "type": "gold",
+          "value": 231000
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 11
+        },
+        {
+          "type": "warrior",
+          "level": 1
+        }
+      ],
+      "time": 4620,
+      "power": 2040
+    },
+    {
+      "level": 2,
+      "resources": [
+        {
+          "type": "food",
+          "value": 100100
+        },
+        {
+          "type": "lumber",
+          "value": 50050
+        },
+        {
+          "type": "stone",
+          "value": 150150
+        },
+        {
+          "type": "gold",
+          "value": 300300
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 11
+        },
+        {
+          "type": "infantry_training_rate",
+          "level": 1
+        }
+      ],
+      "time": 7854,
+      "power": 4350
+    },
+    {
+      "level": 3,
+      "resources": [
+        {
+          "type": "food",
+          "value": 142800
+        },
+        {
+          "type": "lumber",
+          "value": 71400
+        },
+        {
+          "type": "stone",
+          "value": 214200
+        },
+        {
+          "type": "gold",
+          "value": 428400
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 12
+        },
+        {
+          "type": "infantry_training_rate",
+          "level": 2
+        }
+      ],
+      "time": 13398,
+      "power": 9930
+    },
+    {
+      "level": 4,
+      "resources": [
+        {
+          "type": "food",
+          "value": 184800
+        },
+        {
+          "type": "lumber",
+          "value": 92400
+        },
+        {
+          "type": "stone",
+          "value": 277200
+        },
+        {
+          "type": "gold",
+          "value": 554400
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 12
+        },
+        {
+          "type": "infantry_training_rate",
+          "level": 3
+        }
+      ],
+      "time": 22638,
+      "power": 16230
+    },
+    {
+      "level": 5,
+      "resources": [
+        {
+          "type": "food",
+          "value": 263900
+        },
+        {
+          "type": "lumber",
+          "value": 131950
+        },
+        {
+          "type": "stone",
+          "value": 395850
+        },
+        {
+          "type": "gold",
+          "value": 791700
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 13
+        },
+        {
+          "type": "infantry_training_rate",
+          "level": 4
+        }
+      ],
+      "time": 38808,
+      "power": 26310
+    }
+  ],
+
+  "archery_training_rate": [
+    {
+      "level": 1,
+      "resources": [
+        {
+          "type": "food",
+          "value": 38500
+        },
+        {
+          "type": "lumber",
+          "value": 115500
+        },
+        {
+          "type": "stone",
+          "value": 77000
+        },
+        {
+          "type": "gold",
+          "value": 231000
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 11
+        },
+        {
+          "type": "longbow_man",
+          "level": 1
+        }
+      ],
+      "time": 4620,
+      "power": 2040
+    },
+    {
+      "level": 2,
+      "resources": [
+        {
+          "type": "food",
+          "value": 50050
+        },
+        {
+          "type": "lumber",
+          "value": 150150
+        },
+        {
+          "type": "stone",
+          "value": 100100
+        },
+        {
+          "type": "gold",
+          "value": 300300
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 11
+        },
+        {
+          "type": "archery_training_rate",
+          "level": 1
+        }
+      ],
+      "time": 7854,
+      "power": 4350
+    },
+    {
+      "level": 3,
+      "resources": [
+        {
+          "type": "food",
+          "value": 71400
+        },
+        {
+          "type": "lumber",
+          "value": 214200
+        },
+        {
+          "type": "stone",
+          "value": 142800
+        },
+        {
+          "type": "gold",
+          "value": 428400
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 12
+        },
+        {
+          "type": "archery_training_rate",
+          "level": 2
+        }
+      ],
+      "time": 13398,
+      "power": 9930
+    },
+    {
+      "level": 4,
+      "resources": [
+        {
+          "type": "food",
+          "value": 92400
+        },
+        {
+          "type": "lumber",
+          "value": 277200
+        },
+        {
+          "type": "stone",
+          "value": 184800
+        },
+        {
+          "type": "gold",
+          "value": 554400
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 12
+        },
+        {
+          "type": "archery_training_rate",
+          "level": 3
+        }
+      ],
+      "time": 22638,
+      "power": 16230
+    },
+    {
+      "level": 5,
+      "resources": [
+        {
+          "type": "food",
+          "value": 131950
+        },
+        {
+          "type": "lumber",
+          "value": 395850
+        },
+        {
+          "type": "stone",
+          "value": 263900
+        },
+        {
+          "type": "gold",
+          "value": 791700
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 13
+        },
+        {
+          "type": "archery_training_rate",
+          "level": 4
+        }
+      ],
+      "time": 38808,
+      "power": 26310
+    }
+  ],
+
+  "cavalry_training_rate": [
+    {
+      "level": 1,
+      "resources": [
+        {
+          "type": "food",
+          "value": 115500
+        },
+        {
+          "type": "lumber",
+          "value": 77000
+        },
+        {
+          "type": "stone",
+          "value": 38500
+        },
+        {
+          "type": "gold",
+          "value": 231000
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 11
+        },
+        {
+          "type": "horseman",
+          "level": 1
+        }
+      ],
+      "time": 4620,
+      "power": 2040
+    },
+    {
+      "level": 2,
+      "resources": [
+        {
+          "type": "food",
+          "value": 150150
+        },
+        {
+          "type": "lumber",
+          "value": 100100
+        },
+        {
+          "type": "stone",
+          "value": 50050
+        },
+        {
+          "type": "gold",
+          "value": 300300
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 11
+        },
+        {
+          "type": "cavalry_training_rate",
+          "level": 1
+        }
+      ],
+      "time": 7854,
+      "power": 4350
+    },
+    {
+      "level": 3,
+      "resources": [
+        {
+          "type": "food",
+          "value": 214200
+        },
+        {
+          "type": "lumber",
+          "value": 142800
+        },
+        {
+          "type": "stone",
+          "value": 71400
+        },
+        {
+          "type": "gold",
+          "value": 428400
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 12
+        },
+        {
+          "type": "cavalry_training_rate",
+          "level": 2
+        }
+      ],
+      "time": 13398,
+      "power": 9930
+    },
+    {
+      "level": 4,
+      "resources": [
+        {
+          "type": "food",
+          "value": 277200
+        },
+        {
+          "type": "lumber",
+          "value": 184800
+        },
+        {
+          "type": "stone",
+          "value": 92400
+        },
+        {
+          "type": "gold",
+          "value": 554400
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 12
+        },
+        {
+          "type": "cavalry_training_rate",
+          "level": 3
+        }
+      ],
+      "time": 22638,
+      "power": 16230
+    },
+    {
+      "level": 5,
+      "resources": [
+        {
+          "type": "food",
+          "value": 395850
+        },
+        {
+          "type": "lumber",
+          "value": 263900
+        },
+        {
+          "type": "stone",
+          "value": 131950
+        },
+        {
+          "type": "gold",
+          "value": 791700
+        }
+      ],
+      "requirements": [
+        {
+          "type": "academy",
+          "level": 13
+        },
+        {
+          "type": "cavalry_training_rate",
+          "level": 4
+        }
+      ],
+      "time": 38808,
+      "power": 26310
     }
   ]
 }

@@ -97,26 +97,26 @@
                 return "Gold mine";
             case "infantry_hp_1":
                 return "Infantry HP 1";
-            case "ranged_hp_1":
-                return "Ranged HP 1";
+            case "archery_hp_1":
+                return "Archery HP 1";
             case "cavalry_hp_1":
                 return "Cavalry HP 1";
             case "infantry_def_1":
                 return "Infantry Defense 1";
-            case "ranged_def_1":
-                return "Ranged Defense 1";
+            case "archery_def_1":
+                return "Archery Defense 1";
             case "cavalry_def_1":
                 return "Cavalry Defense 1";
             case "infantry_atk_1":
                 return "Infantry Attack 1";
-            case "ranged_atk_1":
-                return "Ranged Attack 1";
+            case "archery_atk_1":
+                return "Archery Attack 1";
             case "cavalry_atk_1":
                 return "Cavalry Attack 1";
             case "infantry_spd_1":
                 return "Infantry Speed 1";
-            case "ranged_spd_1":
-                return "Ranged Speed 1";
+            case "archery_spd_1":
+                return "Archery Speed 1";
             case "cavalry_spd_1":
                 return "Cavalry Speed 1";
             case "troops_load":
@@ -127,6 +127,12 @@
                 return "Longbow man (T2)";
             case "horseman":
                 return "Horseman (T2)";
+            case "infantry_training_rate":
+                return "Infantry Training Rate";
+            case "archery_training_rate":
+                return "Archery Training Rate";
+            case "cavalry_training_rate":
+                return "Cavalry Training Rate";
             default:
                 return "ERROR: NOSTRING";
         }
