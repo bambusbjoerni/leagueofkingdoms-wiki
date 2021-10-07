@@ -133,6 +133,18 @@
                 return "Archery Training Rate";
             case "cavalry_training_rate":
                 return "Cavalry Training Rate";
+            case "infantry_training_speed":
+                return "Infantry Training Speed";
+            case "archery_training_speed":
+                return "Archery Training Speed";
+            case "cavalry_training_speed":
+                return "Cavalry Training Speed";
+            case "infantry_training_cost":
+                return "Infantry Training Cost";
+            case "archery_training_cost":
+                return "Archery Training Cost";
+            case "cavalry_training_cost":
+                return "Cavalry Training Cost";
             default:
                 return "ERROR: NOSTRING";
         }
