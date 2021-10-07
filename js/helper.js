@@ -145,6 +145,16 @@
                 return "Archery Training Cost";
             case "cavalry_training_cost":
                 return "Cavalry Training Cost";
+            case "march_size":
+                return "Marching troop capacity";
+            case "march_limit":
+                return "Troop dispatch queue";
+            case "knight":
+                return "Knight (T3)";
+            case "ranger":
+                return "Ranger (T3)";
+            case "heavy_cavalry":
+                return "Heavy cavalry (T3)";
             default:
                 return "ERROR: NOSTRING";
         }
