@@ -155,6 +155,89 @@
                 return "Ranger (T3)";
             case "heavy_cavalry":
                 return "Heavy cavalry (T3)";
+            case "troops_speed":
+                return "Troops speed";
+
+            case "resource_production":
+                return "Resource Production";
+            case "infantry_hp_against_archer":
+                return "Infantry HP against archer";
+            case "infantry_def_against_archer":
+                return "Infantry DEFENSE against archer";
+            case "infantry_atk_against_archer":
+                return "Infantry ATTACK against archer";
+            case "archer_hp_against_cavalry":
+                return "Archer HP against cavalry";
+            case "archer_def_against_cavalry":
+                return "Archer DEFENSE against cavalry";
+            case "archer_atk_against_cavalry":
+                return "Archer ATTACK against cavalry";
+            case "cavalry_hp_against_infantry":
+                return "Cavalry HP against infantry";
+            case "cavalry_def_against_infantry":
+                return "Cavalry DEFENSE against infantry";
+            case "cavalry_atk_against_infantry":
+                return "Cavalry ATTACK against infantry";
+            case "resource_capacity":
+                return "Resource Capacity";
+            case "castle_defending_infantrys_hp":
+                return "Infantry's HP when defending castle";
+            case "castle_defending_infantrys_def":
+                return "Infantry's DEFENSE when defending castle";
+            case "castle_defending_infantrys_atk":
+                return "Infantry's ATTACK when defending castle";
+            case "castle_defending_archers_hp":
+                return "Archer's HP when defending castle";
+            case "castle_defending_archers_def":
+                return "Archer's DEFENSE when defending castle";
+            case "castle_defending_archers_atk":
+                return "Archer's ATTACK when defending castle";
+            case "castle_defending_cavalrys_hp":
+                return "Cavalry's HP when defending castle";
+            case "castle_defending_cavalrys_def":
+                return "Cavalry's DEFENSE when defending castle";
+            case "castle_defending_cavalrys_atk":
+                return "Cavalry's ATTACK when defending castle";
+            case "resource_protect":
+                return "Resource Protect";
+            case "infantrys_hp_when_composed_of_infantry_only":
+                return "Infantry's HP when composed of Infantry only";
+            case "infantrys_def_when_composed_of_infantry_only":
+                return "Infantry's DEFENSE when composed of Infantry only";
+            case "infantrys_atk_when_composed_of_infantry_only":
+                return "Infantry's ATTACK when composed of Infantry only";
+            case "archers_hp_when_composed_of_archer_only":
+                return "Archer's HP when composed of Archer only";
+            case "archers_def_when_composed_of_archer_only":
+                return "Archer's DEFENSE when composed of Archer only";
+            case "archers_atk_when_composed_of_archer_only":
+                return "Archer's ATTACK when composed of Archer only";
+            case "cavalrys_hp_when_composed_of_cavalry_only":
+                return "Cavalry's HP when composed of Cavalry only";
+            case "cavalrys_def_when_composed_of_cavalry_only":
+                return "Cavalry's DEFENSE when composed of Cavalry only";
+            case "cavalrys_atk_when_composed_of_cavalry_only":
+                return "Cavalry's ATTACK when composed of Cavalry only";
+            case "troop_speed_when_participating_a_rally":
+                return "Troop speed when participating a rally";
+            case "infantrys_hp_when_participating_a_rally":
+                return "Infantry's HP when participating a rally";
+            case "infantrys_def_when_participating_a_rally":
+                return "Infantry's DEFENSE when participating a rally";
+            case "infantrys_atk_when_participating_a_rally":
+                return "Infantry's ATTACK when participating a rally";
+            case "archers_hp_when_participating_a_rally":
+                return "Archer's HP when participating a rally";
+            case "archers_def_when_participating_a_rally":
+                return "Archer's DEFENSE when participating a rally";
+            case "archers_atk_when_participating_a_rally":
+                return "Archer's ATTACK when participating a rally";
+            case "cavalrys_hp_when_participating_a_rally":
+                return "Cavalry's HP when participating a rally";
+            case "cavalrys_def_when_participating_a_rally":
+                return "Cavalry's DEFENSE when participating a rally";
+            case "cavalrys_atk_when_participating_a_rally":
+                return "Cavalry's ATTACK when participating a rally";
             default:
                 return "ERROR: NOSTRING";
         }
