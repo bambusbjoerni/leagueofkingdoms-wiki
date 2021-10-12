@@ -92,7 +92,6 @@
             return;
         }
         let research_data = this.research_data[this.selected_research][this.selected_level];
-        console.log(research_data);
 
         // RESOURCE REQUIREMENTS
         $.each(research_data["resources"], function (i, resource) {
