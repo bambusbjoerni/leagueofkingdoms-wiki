@@ -95,31 +95,31 @@
                 return "Quarry";
             case "gold_mine":
                 return "Gold mine";
-            case "infantry_hp_1":
+            case "infantry_hp":
                 return "Infantry HP 1";
-            case "archery_hp_1":
+            case "ranged_hp":
                 return "Archery HP 1";
-            case "cavalry_hp_1":
+            case "cavalry_hp":
                 return "Cavalry HP 1";
-            case "infantry_def_1":
+            case "infantry_def":
                 return "Infantry Defense 1";
-            case "archery_def_1":
+            case "ranged_def":
                 return "Archery Defense 1";
-            case "cavalry_def_1":
+            case "cavalry_def":
                 return "Cavalry Defense 1";
-            case "infantry_atk_1":
+            case "infantry_atk":
                 return "Infantry Attack 1";
-            case "archery_atk_1":
+            case "ranged_atk":
                 return "Archery Attack 1";
-            case "cavalry_atk_1":
+            case "cavalry_atk":
                 return "Cavalry Attack 1";
-            case "infantry_spd_1":
+            case "infantry_spd":
                 return "Infantry Speed 1";
-            case "archery_spd_1":
+            case "ranged_spd":
                 return "Archery Speed 1";
-            case "cavalry_spd_1":
+            case "cavalry_spd":
                 return "Cavalry Speed 1";
-            case "troops_load":
+            case "troops_storage":
                 return "Troops load";
             case "warrior":
                 return "Warrior (T2)";
@@ -127,21 +127,21 @@
                 return "Longbow man (T2)";
             case "horseman":
                 return "Horseman (T2)";
-            case "infantry_training_rate":
+            case "infantry_training_amount":
                 return "Infantry Training Rate";
-            case "archery_training_rate":
+            case "ranged_training_amount":
                 return "Archery Training Rate";
-            case "cavalry_training_rate":
+            case "cavalry_training_amount":
                 return "Cavalry Training Rate";
             case "infantry_training_speed":
                 return "Infantry Training Speed";
-            case "archery_training_speed":
+            case "ranged_training_speed":
                 return "Archery Training Speed";
             case "cavalry_training_speed":
                 return "Cavalry Training Speed";
             case "infantry_training_cost":
                 return "Infantry Training Cost";
-            case "archery_training_cost":
+            case "ranged_training_cost":
                 return "Archery Training Cost";
             case "cavalry_training_cost":
                 return "Cavalry Training Cost";
@@ -155,9 +155,56 @@
                 return "Ranger (T3)";
             case "heavy_cavalry":
                 return "Heavy cavalry (T3)";
-            case "troops_speed":
+            case "troops_spd":
                 return "Troops speed";
-
+            case "troops_hp":
+                return "Troops HP";
+            case "troops_def":
+                return "Troops Defense";
+            case "troops_atk":
+                return "Troops Attack";
+            case "hospital_capacity":
+                return "Hospital Capacity";
+            case "healing_time_reduced":
+                return "Speed up healing Time";
+            case "guardian":
+                return "Guardian (T4)";
+            case "crossbow_man":
+                return "Crossbow man (T4)";
+            case "iron_cavalry":
+                return "Iron cavalry (T4)";
+            case "rally_attack_amount":
+                return "Rally Size";
+            case "advanced_infantry_hp":
+                return "Infantry HP 2";
+            case "advanced_ranged_hp":
+                return "Archery HP 2";
+            case "advanced_cavalry_hp":
+                return "Cavalry HP 2";
+            case "advanced_infantry_def":
+                return "Infantry Defense 2";
+            case "advanced_ranged_def":
+                return "Archery Defense 2";
+            case "advanced_cavalry_def":
+                return "Cavalry Defense 2";
+            case "advanced_infantry_atk":
+                return "Infantry Attack 2";
+            case "advanced_ranged_atk":
+                return "Archery Attack 2";
+            case "advanced_cavalry_atk":
+                return "Cavalry Attack 2";
+            case "advanced_infantry_spd":
+                return "Infantry Speed 2";
+            case "advanced_ranged_spd":
+                return "Archery Speed 2";
+            case "advanced_cavalry_spd":
+                return "Cavalry Speed 2";
+            case "crusader":
+                return "Crusader (T5)";
+            case "sniper":
+                return "Sniper (T5)";
+            case "dragoon":
+                return "Dragoon (T5)";
             case "food_production":
                 return "Food Production 1";
             case "wood_production":
