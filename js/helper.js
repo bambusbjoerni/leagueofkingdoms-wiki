@@ -158,6 +158,74 @@
             case "troops_speed":
                 return "Troops speed";
 
+            case "food_production":
+                return "Food Production 1";
+            case "wood_production":
+                return "Lumber Production 1";
+            case "stone_production":
+                return "Stone Production 1";
+            case "gold_production":
+                return "Gold Production 1";
+            case "food_capacity":
+                return "Food Capacity 1";
+            case "wood_capacity":
+                return "Lumber Capacity 1";
+            case "stone_capacity":
+                return "Stone Capacity 1";
+            case "gold_capacity":
+                return "Gold Capacity 1";
+            case "food_gathering_speed":
+                return "Food Gathering Speed 1";
+            case "wood_gathering_speed":
+                return "Lumber Gathering Speed 1";
+            case "stone_gathering_speed":
+                return "Stone Gathering Speed 1";
+            case "gold_gathering_speed":
+                return "Gold Gathering Speed 1";
+            case "crystal_gathering_speed":
+                return "Crystal Gathering Speed 1";
+            case "infantry_storage":
+                return "Infantry Storage";
+            case "ranged_storage":
+                return "Archery Storage";
+            case "cavalry_storage":
+                return "Cavalry Storage";
+            case "research_speed":
+                return "Research Speed 1";
+            case "construction_speed":
+                return "Construction Speed 1";
+            case "resource_protect":
+                return "Resource Protect";
+            case "advanced_food_production":
+                return "Food Production 2";
+            case "advanced_wood_production":
+                return "Lumber Production 2";
+            case "advanced_stone_production":
+                return "Stone Production 2";
+            case "advanced_gold_production":
+                return "Gold Production 2";
+            case "advanced_food_capacity":
+                return "Food Capacity 2";
+            case "advanced_wood_capacity":
+                return "Lumber Capacity 2";
+            case "advanced_stone_capacity":
+                return "Stone Capacity 2";
+            case "advanced_gold_capacity":
+                return "Gold Capacity 2";
+            case "advanced_research_speed":
+                return "Research Speed 2";
+            case "advanced_construction_speed":
+                return "Construction Speed 2";
+            case "advanced_food_gathering_speed":
+                return "Food Gathering Speed 2";
+            case "advanced_wood_gathering_speed":
+                return "Lumber Gathering Speed 2";
+            case "advanced_stone_gathering_speed":
+                return "Stone Gathering Speed 2";
+            case "advanced_gold_gathering_speed":
+                return "Gold Gathering Speed 2";
+            case "advanced_crystal_gathering_speed":
+                return "Crystal Gathering Speed 2";
             case "resource_production":
                 return "Resource Production";
             case "infantry_hp_against_archer":
@@ -198,8 +266,8 @@
                 return "Cavalry's DEFENSE when defending castle";
             case "castle_defending_cavalrys_atk":
                 return "Cavalry's ATTACK when defending castle";
-            case "resource_protect":
-                return "Resource Protect";
+            /*case "resource_protect":
+                return "Resource Protect";*/
             case "infantrys_hp_when_composed_of_infantry_only":
                 return "Infantry's HP when composed of Infantry only";
             case "infantrys_def_when_composed_of_infantry_only":
