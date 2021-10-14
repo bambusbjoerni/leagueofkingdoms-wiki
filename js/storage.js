@@ -1,4 +1,4 @@
-(function($){
+(function ($) {
 
     function APPStorage() {
         this.settings = {
@@ -12,7 +12,8 @@
         this.research = {};
 
     }
-    APPStorage.prototype.init = function() {
+
+    APPStorage.prototype.init = function () {
         let buildingspeed = localStorage.getItem("buildingspeed");
         if (buildingspeed) {
             this.settings.buildingspeed = buildingspeed;
@@ -35,7 +36,7 @@
         }
     };
 
-    APPStorage.prototype.changeSetting = function(item, value) {
+    APPStorage.prototype.changeSetting = function (item, value) {
         if (!(item in this.settings)) {
             console.error("Settings " + item + "not changeable.");
             return false;
@@ -45,7 +46,7 @@
         return true;
     };
 
-    APPStorage.prototype.getSetting = function(item) {
+    APPStorage.prototype.getSetting = function (item) {
         if (!(item in this.settings)) {
             console.error("Settings " + item + " not gettable.");
             return false;
@@ -53,11 +54,11 @@
         return this.settings[item];
     };
 
-    APPStorage.prototype.clearLocalStorage = function() {
+    APPStorage.prototype.clearLocalStorage = function () {
         localStorage.clear();
     };
 
-    APPStorage.prototype.getBuildingInfo = function(building) {
+    APPStorage.prototype.getBuildingInfo = function (building) {
         let deferred = $.Deferred();
         let that = this;
         if (building in this.buildings) {
@@ -71,7 +72,7 @@
         return deferred.promise();
     };
 
-    APPStorage.prototype.getResearchInfo = function(tree) {
+    APPStorage.prototype.getResearchInfo = function (tree) {
         let deferred = $.Deferred();
         let that = this;
         if (tree in this.research) {

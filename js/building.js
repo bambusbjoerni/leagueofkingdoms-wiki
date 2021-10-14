@@ -1,4 +1,4 @@
-(function($){
+(function ($) {
 
     function APPBuilding() {
         this.selected_building = "none";
@@ -7,7 +7,7 @@
 
     }
 
-    APPBuilding.prototype.init = function() {
+    APPBuilding.prototype.init = function () {
         this.building_select = $("#building_select");
         this.building_select.change(this._buildingSelected.bind(this));
 
@@ -22,38 +22,78 @@
         this.building_result_time = $("#building_result_time");
     };
 
-    APPBuilding.prototype._buildingSelected = function() {
+    APPBuilding.prototype.renderPath = async function (data) {
+        console.log(data);
+        switch (data.length) {
+            default:
+
+            case 2:
+                this.selected_level = data[1];
+            case 1:
+                this.selected_building = data[0];
+                this.building_data = await APPStorage.getBuildingInfo(this.selected_building);
+            case 0:
+
+        }
+        this.render();
+    };
+
+    APPBuilding.prototype.render = function () {
+        let data = [];
+        if (this.selected_building !== "none") {
+            data.push(this.selected_building);
+            this.building_select.val(this.selected_building);
+            this._renderBuildingSelected();
+            if (this.selected_level !== "none") {
+                data.push(this.selected_level);
+                this.building_level_select.val(this.selected_level);
+                this.renderBuildingResult();
+            }
+        }
+        APPRouting.pageChanged("building", data);
+    };
+
+    APPBuilding.prototype._buildingSelected = function () {
         let that = this;
         this.selected_building = this.building_select.val();
         this.building_level_select.empty();
-        if (this.selected_building === "none"){
+        if (this.selected_building === "none") {
             this.building_level_container.hide();
             this.building_result_container.hide();
+            APPRouting.pageChanged("building");
             return;
         }
         this.building_result_container.hide();
         APPStorage.getBuildingInfo(this.selected_building).done(function (data) {
             that.building_data = data;
-            that.building_level_select.append(new Option(" ", "none"));
-            $.each(data, function(i, d) {
-                if (d.valid) {
-                    that.building_level_select.append(new Option(i, i));
-                }
-            });
-            that.building_level_container.show();
+            that._renderBuildingSelected();
+            APPRouting.pageChanged("building", [that.selected_building]);
         })
     };
 
-    APPBuilding.prototype._buildingLevelSelected = function() {
+    APPBuilding.prototype._renderBuildingSelected = function () {
+        let that = this;
+        this.building_level_select.append(new Option(" ", "none"));
+        $.each(this.building_data, function (i, d) {
+            if (d.valid) {
+                that.building_level_select.append(new Option(i, i));
+            }
+        });
+        this.building_level_container.show();
+    };
+
+    APPBuilding.prototype._buildingLevelSelected = function () {
         this.selected_level = this.building_level_select.val();
-        if (this.selected_level === "none"){
+        if (this.selected_level === "none") {
             this.building_result_container.hide();
+            APPRouting.pageChanged("building", [this.selected_building]);
             return;
         }
+        APPRouting.pageChanged("building", [this.selected_building, this.selected_level]);
         this.renderBuildingResult();
     };
 
-    APPBuilding.prototype.renderBuildingResult = function() {
+    APPBuilding.prototype.renderBuildingResult = function () {
         let that = this;
         this.building_result_resources.empty();
         this.building_result_requirements.empty();
@@ -108,7 +148,7 @@
 
         let helps = APPHelper.hallToHelps(Number(APPStorage.getSetting("hall_level")));
         let help_seconds = APPHelper.calcHelpTime(reduced_seconds, helps, Number(APPStorage.getSetting("help_speedup_1")), Number(APPStorage.getSetting("help_speedup_2")));
-        this._appendTimeBlock(this.building_result_time, help_seconds, "Help time (" +helps + " helps):");
+        this._appendTimeBlock(this.building_result_time, help_seconds, "Help time (" + helps + " helps):");
 
         let final_time = reduced_seconds - help_seconds;
         this._appendTimeBlock(this.building_result_time, final_time, "Time remaining:", "bold");
@@ -116,7 +156,7 @@
         this.building_result_container.show();
     };
 
-    APPBuilding.prototype._appendTimeBlock = function(container, time, text, cssclass) {
+    APPBuilding.prototype._appendTimeBlock = function (container, time, text, cssclass) {
         let d = Math.floor(time / (3600 * 24));
         let h = Math.floor(time % (3600 * 24) / 3600);
         let m = Math.floor(time % 3600 / 60);

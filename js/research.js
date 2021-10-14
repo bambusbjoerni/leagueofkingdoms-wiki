@@ -1,4 +1,4 @@
-(function($){
+(function ($) {
 
     function APPResearch() {
         this.selected_tree = "none";
@@ -8,7 +8,7 @@
 
     }
 
-    APPResearch.prototype.init = function() {
+    APPResearch.prototype.init = function () {
         this.research_tree_select = $("#research_tree_select");
         this.research_tree_select.change(this._researchTreeSelected.bind(this));
 
@@ -27,61 +27,120 @@
         this.research_result_time = $("#research_result_time");
     };
 
-    APPResearch.prototype._researchTreeSelected = function() {
+    APPResearch.prototype.renderPath = async function (data) {
+        console.log(data);
+        switch (data.length) {
+            default:
+
+            case 3:
+                this.selected_level = data[2];
+            case 2:
+                this.selected_research = data[1];
+            case 1:
+                this.selected_tree = data[0];
+                this.research_data = await APPStorage.getResearchInfo(this.selected_tree);
+            case 0:
+
+        }
+        this.render();
+    };
+
+    APPResearch.prototype.render = function () {
+        let data = [];
+        if (this.selected_tree !== "none") {
+            data.push(this.selected_tree);
+            this.research_tree_select.val(this.selected_tree);
+            this._renderResearchTreeSelected();
+            if (this.selected_research !== "none") {
+                data.push(this.selected_research);
+                this.research_research_select.val(this.selected_research);
+                this._renderResearchSelected();
+                if (this.selected_level !== "none") {
+                    data.push(this.selected_level);
+                    this.research_level_select.val(this.selected_level);
+                    this.renderResearchResult();
+                }
+            }
+        }
+        APPRouting.pageChanged("research", data);
+    };
+
+    APPResearch.prototype._researchTreeSelected = function () {
         let that = this;
         this.selected_tree = this.research_tree_select.val();
-        this.research_research_select.empty();
-        if (this.selected_tree === "none"){
+        if (this.selected_tree === "none") {
             this.research_research_container.hide();
             this.research_level_container.hide();
             this.research_result_container.hide();
+            APPRouting.pageChanged("research");
             return;
         }
-        this.research_level_container.hide();
-        this.research_result_container.hide();
         APPStorage.getResearchInfo(this.selected_tree).done(function (data) {
             that.research_data = data;
-            that.research_research_select.append(new Option(" ", "none"));
-            $.each(data, function(i, d) {
-                that.research_research_select.append(new Option(APPHelper.typeToName(i), i));
-            });
-            that.research_research_container.show();
-        })
+            that._renderResearchTreeSelected();
+            APPRouting.pageChanged("research", [that.selected_tree]);
+        });
     };
 
-    APPResearch.prototype._researchSelected = function() {
+    APPResearch.prototype._renderResearchTreeSelected = function () {
+        let that = this;
+        this.research_research_select.empty();
+        this.research_level_container.hide();
+        this.research_result_container.hide();
+        this.research_research_select.append(new Option(" ", "none"));
+        $.each(this.research_data, function (i, d) {
+            that.research_research_select.append(new Option(APPHelper.typeToName(i), i));
+        });
+        this.research_research_container.show();
+    };
+
+    APPResearch.prototype._researchSelected = function () {
         let that = this;
         this.selected_research = this.research_research_select.val();
-        this.research_level_select.empty();
-        if (this.selected_research === "none"){
+        if (this.selected_research === "none") {
             this.research_level_container.hide();
             this.research_result_container.hide();
+            APPRouting.pageChanged("research", [that.selected_tree]);
             return;
         }
-        this.research_result_container.hide();
         if (this.research_data[this.selected_research].length === 1) {
-            this.selected_level = 0;
-            this.research_level_container.hide();
-            this.renderResearchResult();
+            this.selected_level = 1;
+            APPRouting.pageChanged("research", [this.selected_tree, this.selected_research, this.selected_level]);
         } else {
-            this.research_level_select.append(new Option(" ", "none"));
-            $.each(this.research_data[this.selected_research], function(i, d) {
-                that.research_level_select.append(new Option(i+1, i));
-            });
-            this.research_level_container.show();
+            APPRouting.pageChanged("research", [this.selected_tree, this.selected_research]);
+        }
+        this._renderResearchSelected();
+        if (this.research_data[this.selected_research].length === 1) {
+            this.renderResearchResult();
         }
     };
 
-    APPResearch.prototype._researchLevelSelected = function() {
+    APPResearch.prototype._renderResearchSelected = function () {
+        let that = this;
+        this.research_level_select.empty();
+        this.research_level_select.append(new Option(" ", "none"));
+        $.each(this.research_data[this.selected_research], function (i, d) {
+            that.research_level_select.append(new Option(i + 1, i + 1));
+        });
+        this.research_level_container.show();
+        this.research_result_container.hide();
+        if (this.research_data[this.selected_research].length === 1) {
+            this.research_level_container.hide();
+        }
+    };
+
+    APPResearch.prototype._researchLevelSelected = function () {
         this.selected_level = this.research_level_select.val();
-        if (this.selected_level === "none"){
+        if (this.selected_level === "none") {
             this.research_result_container.hide();
             return;
+            APPRouting.pageChanged("research", [this.selected_tree, this.selected_research]);
         }
+        APPRouting.pageChanged("research", [this.selected_tree, this.selected_research, this.selected_level]);
         this.renderResearchResult();
     };
 
-    APPResearch.prototype.renderResearchResult = function() {
+    APPResearch.prototype.renderResearchResult = function () {
         let that = this;
         this.research_result_resources.empty();
         this.research_result_requirements.empty();
@@ -91,7 +150,7 @@
             console.info("Don't render research results, since no research tree or research or level selected");
             return;
         }
-        let research_data = this.research_data[this.selected_research][this.selected_level];
+        let research_data = this.research_data[this.selected_research][this.selected_level - 1];
 
         // RESOURCE REQUIREMENTS
         $.each(research_data["resources"], function (i, resource) {
@@ -136,7 +195,7 @@
 
         let helps = APPHelper.hallToHelps(Number(APPStorage.getSetting("hall_level")));
         let help_seconds = APPHelper.calcHelpTime(reduced_seconds, helps, Number(APPStorage.getSetting("help_speedup_1")), Number(APPStorage.getSetting("help_speedup_2")));
-        this._appendTimeBlock(this.research_result_time, help_seconds, "Help time (" +helps + " helps):");
+        this._appendTimeBlock(this.research_result_time, help_seconds, "Help time (" + helps + " helps):");
 
         let final_time = reduced_seconds - help_seconds;
         this._appendTimeBlock(this.research_result_time, final_time, "Time remaining:", "bold");
@@ -144,7 +203,7 @@
         this.research_result_container.show();
     };
 
-    APPResearch.prototype._appendTimeBlock = function(container, time, text, cssclass) {
+    APPResearch.prototype._appendTimeBlock = function (container, time, text, cssclass) {
         let d = Math.floor(time / (3600 * 24));
         let h = Math.floor(time % (3600 * 24) / 3600);
         let m = Math.floor(time % 3600 / 60);

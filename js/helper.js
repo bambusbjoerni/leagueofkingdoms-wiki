@@ -1,8 +1,9 @@
-(function($){
+(function ($) {
 
-    function APPHelper() {}
+    function APPHelper() {
+    }
 
-    APPHelper.prototype.hallToHelps = function(hall_level) {
+    APPHelper.prototype.hallToHelps = function (hall_level) {
         switch (hall_level) {
             case 1:
             case 2:
@@ -54,7 +55,7 @@
     };
 
     APPHelper.prototype.typeToName = function (type) {
-        switch(type) {
+        switch (type) {
             case "food":
                 return "Food";
             case "lumber":
@@ -358,7 +359,7 @@
         }
     };
 
-    APPHelper.prototype.numberWithCommas = function(x) {
+    APPHelper.prototype.numberWithCommas = function (x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     };
 
@@ -379,12 +380,12 @@
         return help_time;
     };
 
-    APPHelper.prototype.prefixZeroIfRequired = function(number) {
+    APPHelper.prototype.prefixZeroIfRequired = function (number) {
         return (String(number).length < 2 ? "0" + number : number)
     };
 
-    APPHelper.prototype.inputFilter = function(inputFilter) {
-        return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function() {
+    APPHelper.prototype.inputFilter = function (inputFilter) {
+        return this.on("input keydown keyup mousedown mouseup select contextmenu drop", function () {
             if (inputFilter(this.value)) {
                 this.oldValue = this.value;
                 this.oldSelectionStart = this.selectionStart;

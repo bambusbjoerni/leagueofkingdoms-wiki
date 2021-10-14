@@ -1,4 +1,4 @@
-(function($){
+(function ($) {
 
     function APPSettings() {
         this.buildingspeed_input = null;
@@ -8,10 +8,10 @@
         this.help_alliance_2_input = null;
     }
 
-    APPSettings.prototype.init = function() {
+    APPSettings.prototype.init = function () {
         this.buildingspeed_input = $("#buildingspeed_input");
         this.buildingspeed_input.val(APPStorage.getSetting("buildingspeed"));
-        this.buildingspeed_input.inputFilter(function(value) {
+        this.buildingspeed_input.inputFilter(function (value) {
             return /^(0|[1-9][0-9]{0,2})?$/.test(value);    // Allow digits only, using a RegExp
         }).on("input keydown keyup mousedown mouseup select contextmenu drop", function (ev) {
             APPStorage.changeSetting("buildingspeed", this.value);
@@ -19,7 +19,7 @@
         });
         this.researchspeed_input = $("#researchspeed_input");
         this.researchspeed_input.val(APPStorage.getSetting("researchspeed"));
-        this.researchspeed_input.inputFilter(function(value) {
+        this.researchspeed_input.inputFilter(function (value) {
             return /^(0|[1-9][0-9]{0,2})?$/.test(value);    // Allow digits only, using a RegExp
         }).on("input keydown keyup mousedown mouseup select contextmenu drop", function (ev) {
             APPStorage.changeSetting("researchspeed", this.value);
