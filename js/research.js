@@ -3,9 +3,8 @@
     function APPResearch() {
         this.selected_tree = "none";
         this.selected_research = "none";
-        this.research_data = {};
         this.selected_level = "none";
-
+        this.research_data = {};
     }
 
     APPResearch.prototype.init = function () {

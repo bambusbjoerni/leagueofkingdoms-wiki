@@ -2,9 +2,8 @@
 
     function APPBuilding() {
         this.selected_building = "none";
-        this.building_data = {};
         this.selected_level = "none";
-
+        this.building_data = {};
     }
 
     APPBuilding.prototype.init = function () {
@@ -23,7 +22,6 @@
     };
 
     APPBuilding.prototype.renderPath = async function (data) {
-        console.log(data);
         switch (data.length) {
             default:
 

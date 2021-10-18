@@ -6,7 +6,26 @@
     APPRouting.prototype.init = function () {
         window.addEventListener('popstate', this._popEvent.bind(this));
 
-        $("#heading > div").on("click", (function (ev) {
+        $("#settings").on("click", (function (ev) {
+            let that = this;
+            console.log(this);
+            let target = $(ev.currentTarget);
+            $("#overlays").show(0, function () {
+                $("#settings_overlay").addClass("overlay_show");
+                that._scrolling(false);
+            });
+        }).bind(this));
+
+        $(".close_overlay").on("click", (function (ev) {
+            let target = $(ev.currentTarget);
+            $("#settings_overlay").removeClass("overlay_show");
+            this._scrolling(true);
+            setTimeout(function () {
+                $("#overlays").hide();
+            }, 350);
+        }).bind(this));
+
+        $("#menu > div").on("click", (function (ev) {
             let target = $(ev.currentTarget);
             if (target.hasClass("selected")) {
                 return;
@@ -30,8 +49,8 @@
     };
 
     APPRouting.prototype.switchTab = function (target) {
-        $("#heading > div").removeClass("selected");
-        $(`#heading > div[data-tab="${target}"]`).addClass("selected");
+        $("#menu > div").removeClass("selected");
+        $(`#menu > div[data-tab="${target}"]`).addClass("selected");
         $("#tabs > div").hide();
         $("#" + target + "_tab").show();
     };
@@ -41,10 +60,8 @@
         if (!hash.startsWith("#!")) {
             return;
         }
-        console.log(hash);
         hash = hash.substring(2, hash.length);
         let hash_split = hash.split("/");
-        console.log(hash_split);
         $("#heading > div").removeClass("selected");
         let page = hash_split.shift();
         switch (page) {
@@ -61,15 +78,20 @@
     };
 
     APPRouting.prototype.pageChanged = function (page, data = []) {
-        console.log(window.location);
-        let new_hash = "#!" + page + "/" + data.join("/");
-        console.log(window.location.hash);
-        console.log(new_hash);
+        data.unshift(page);
+        let new_hash = "#!" + data.join("/");
         if (window.location.hash !== new_hash) {
-            console.log("lol");
             window.history.pushState(null, null, new_hash);
         }
         //window.location.hash = ;
+    };
+
+    APPRouting.prototype._scrolling = function(scroll) {
+        if (scroll) {
+            $("body").removeClass("stop-scrolling").unbind("touchmove");
+        } else {
+            $("body").addClass("stop-scrolling").bind("touchmove", function(e){e.preventDefault()});
+        }
     };
 
     APPRouting.prototype._popEvent = function (ev) {

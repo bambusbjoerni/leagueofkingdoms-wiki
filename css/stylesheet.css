@@ -2,9 +2,16 @@
     font-family: "opensans";
     src: url('/fonts/opensans-regular.ttf') format("truetype");
 }
+
 @font-face {
-    font-family: "opensans-bold";
+    font-family: "opensans";
     src: url('/fonts/opensans-bold.ttf') format("truetype");
+    font-weight: bold;
+}
+
+.stop-scrolling {
+    height: 100%;
+    overflow: hidden;
 }
 
 .flex_row {
@@ -25,43 +32,66 @@
     justify-content: space-around;
 }
 
-.bold {
-    font-family: opensans-bold;
-}
-
 body {
     margin: 0;
-    font-family: 'opensans';
+    font-family: 'opensans', sans-serif;
     background-color: #2C2033;
 }
 
-.app {
+.app,
+.overlay_app {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     max-width: 500px;
     margin: 0 auto;
     min-height: 100%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.app {
     background-color: #654472;
 }
 
-#heading {
+.overlay_app {
+    height: 100%;
+}
+
+#heading,
+.overlay_header {
     text-align: center;
-    font-family: 'opensans-bold';
-}
-
-#heading > div {
-    padding: 1em;
-    width: 50%;
+    font-weight: bold;
+    justify-content: space-between;
     background-color: #BE5A7D;
+    position: fixed;
+    max-width: 500px;
+    width: 100%;
+    box-sizing: border-box;
+    user-select: none;
 }
 
-#heading > div.selected {
+#heading > #settings {
+    padding: 1em;
+    cursor: pointer;
+}
+
+.overlay_header,
+#menu > div {
+    padding: 1em;
+}
+
+.overlay_header {
+    z-index: 1;
+}
+
+#menu > div.selected {
     background-color: #654472;
     color: #CE356F;
 }
 
-#heading > div:not(.selected) {
+#menu > div:not(.selected) {
     cursor: pointer;
 }
 
@@ -76,15 +106,52 @@ body {
 }
 
 /* endregion SETTINGS */
+#tabs,
+.overlay_content {
+    margin-top: 3em;
+}
 
-#settings_tab,
+.overlay_content {
+    background: #654472;
+}
+
 #building_tab {
     display: none;
 }
 
-#settings_tab,
+#overlays {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.close_overlay {
+    cursor: pointer;
+}
+
+#settings_overlay {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease;
+    transform: translateX(-100%);
+    background: #654472;
+}
+
+#settings_overlay.overlay_show {
+    transform: translateX(0%);
+}
+
 #building_tab,
-#research_tab {
+#research_tab,
+.overlay_content {
     padding: 1.25em;
 }
 
@@ -98,11 +165,11 @@ body {
 }
 
 .container > span {
-    font-family: 'opensans-bold';
+    font-weight: bold;
     display: block;
     text-align: center;
     padding: 0.5em;
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: #CE356F;
 }
 
@@ -127,7 +194,7 @@ select {
 
 .setting_heading,
 .result_heading {
-    font-family: 'opensans-bold';
+    font-weight: bold;
     text-align: center;
     margin-bottom: 0.5em;
     font-size: 1.5em;
